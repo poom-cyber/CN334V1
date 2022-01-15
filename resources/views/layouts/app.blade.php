@@ -21,7 +21,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100" style="background:#FFE888">
+        <div class="min-h-screen bg-gray-100" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/bg2.png?alt=media&token=2531ef94-4799-48b8-95b9-d6518ba70401')">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->

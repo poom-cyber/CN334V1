@@ -5,17 +5,18 @@
     tr {
         font-size: 18px;
     }
+    td {
+        font-size: 16px;
+    }
     table {
         background: #F1F1F1;
     }
+    #slot {
+        background: #3054A5;
+    }
 </style>
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('All Task') }}
-        </h2>
-    </x-slot>
-
+  
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
@@ -76,7 +77,7 @@
             font-weight: 1000;
             text-shadow: 2px 2px 4px #000000;
             ">
-                    <div class="flex-auto text-2xl mb-4">Todo List</div>
+                    <div class="flex-auto text-2xl mb-4">See All Task</div>
 
                 </div>
 
@@ -84,7 +85,7 @@
                     <thead>
                         <tr class="border-b">
                             <th class="text-left p-3 px-5">Create by</th>
-                            <th class="text-left p-3 px-5">Content</th>
+                            <th class="text-left p-3 px-5">Contents</th>
                             <th class="text-left p-3 px-5">Create date</th>
                             <th class="text-left p-3 px-5">Update date</th>
 

@@ -41,7 +41,7 @@
                 @endif
 
                 <x-jet-button class="ml-4"
-                style="background:#F4C400; color: #000">
+                style="background:#F4C400; color: #000; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
                     {{ __('Log in') }}
                 </x-jet-button>
             </div>

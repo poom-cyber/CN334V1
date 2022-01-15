@@ -51,12 +51,6 @@
     }
 </style>
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
@@ -97,8 +91,18 @@
 
                 </div>
                 <br>
-                <div class="flex">
+                <div class="header" style="background:#3054A5; 
+        border-bottom: 10px solid #F4C400;
+            padding-top: 18px; 
+            padding-Left: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 1000;
+            text-shadow: 2px 2px 4px #000000;
+            ">
                     <div class="flex-auto text-2xl mb-4">Members</div>
+
                 </div>
 
                 <table>
@@ -117,7 +121,8 @@
                                         </div>
                                         <div class="flip-card-back" style="background:#F4C400;">
                                             <br>
-                                            <p style="font-weight: 1000; color: #000">NAME<p>
+                                            <p style="font-weight: 1000; color: #000">NAME
+                                            <p>
                                             <p style="color: #000">Thapanapong Sinprommat</p>
                                             <br>
                                             <p style="font-weight: 1000; color: #000">STUDENT ID</p>
@@ -141,7 +146,8 @@
                                         </div>
                                         <div class="flip-card-back" style="background:#F4C400;">
                                             <br>
-                                            <p style="font-weight: 1000; color: #000">NAME<p>
+                                            <p style="font-weight: 1000; color: #000">NAME
+                                            <p>
                                             <p style="color: #000">Nattapon Khajornkasirat</p>
                                             <br>
                                             <p style="font-weight: 1000; color: #000">STUDENT ID</p>
@@ -165,7 +171,8 @@
                                         </div>
                                         <div class="flip-card-back" style="background:#F4C400;">
                                             <br>
-                                            <p style="font-weight: 1000; color: #000">NAME<p>
+                                            <p style="font-weight: 1000; color: #000">NAME
+                                            <p>
                                             <p style="color: #000">Jirawat Chaichompu</p>
                                             <br>
                                             <p style="font-weight: 1000; color: #000">STUDENT ID</p>

@@ -53,7 +53,7 @@
                 </a>
 
                 <x-jet-button class="ml-4"
-                style="background:#3054A5; color: #fff">
+                style="background:#3054A5; color: #fff; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);">
                     {{ __('Register') }}
                 </x-jet-button>
             </div>
