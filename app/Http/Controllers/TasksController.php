@@ -18,7 +18,7 @@ class TasksController extends Controller
     	return view('add');
     }
 
-    public function seeAllTanks()
+    public function seeAllTodo()
     {
         return view('allTank');
     }

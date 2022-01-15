@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified',])-> group(function(){
     Route::get('/dashboard', [TasksController::class, 'index'])->name('dashboard');
     
-    Route::get('/allTank', [TasksController::class, 'seeAllTanks']);
+    Route::get('/allTank', [TasksController::class, 'seeAllTodo']);
 
     Route::get('/editTank', [TasksController::class, 'editTank']);
 
