@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <img src="https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/welcome.png?alt=media&token=07845931-4213-457c-97c0-1c1eed4ff35c" 
+                    alt="W3Schools.com" width="240" height="150">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -51,7 +52,8 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-jet-button class="ml-4">
+                <x-jet-button class="ml-4"
+                style="background:#3054A5; color: #fff">
                     {{ __('Register') }}
                 </x-jet-button>
             </div>

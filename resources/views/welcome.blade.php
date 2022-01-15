@@ -24,17 +24,60 @@
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:green sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div >
-                    <img src="https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/wellcome.png?alt=media&token=16ebc02c-20db-41a0-9cc7-44c53546d8f6" 
-                    alt="W3Schools.com" width="600" height="400">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/welcome.png?alt=media&token=07845931-4213-457c-97c0-1c1eed4ff35c" 
+                    alt="W3Schools.com" width="800" height="500">
                     <br><br>
                     <div class="relative flex  justify-center  bg-gray-100 dark:green sm:items-center py-4 sm:pt-0">
                         @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-black-500 underline">Dashboard</a>
+                        <a href="{{ url('/dashboard') }}"
+                        style="background:#F4C400; 
+                         border-radius: 20px;
+                        border: 5px solid #2A2F3C;
+                        padding: 20px;
+                        margin: 10px;
+                        color: #fff;
+                        font-weight: 1000;
+                        font-size: 32px;
+                        text-shadow: 2px 2px;
+                        color: white;
+                        text-shadow: 2px 2px 4px #000000;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        "
+                        >Dashboard</a>
                         @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-black-500 underline">Log in</a>
-                        
+                        <a href="{{ route('login') }}" 
+                        style="background:#F4C400; 
+                        border-radius: 20px;
+                        border: 5px solid #2A2F3C;
+                        padding: 20px;
+                        margin: 10px;
+                        color: #fff;
+                        font-weight: 1000;
+                        font-size: 32px;
+                        text-shadow: 2px 2px;
+                        color: white;
+                        text-shadow: 2px 2px 4px #000000;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        "
+                        >Log in</a>
+
                         @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-black-500 underline">Register</a>
+                        <a href="{{ route('register') }}"
+                        style="
+                        background:#3054A5;
+                        border-radius: 20px;
+                        border: 5px solid #2A2F3C;
+                        padding: 20px;
+                        margin: 10px;
+                        color: #fff;
+                        font-weight: 1000;
+                        font-size: 32px;
+                        text-shadow: 2px 2px;
+                        color: white;
+                        text-shadow: 2px 2px 4px #000000;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        "
+                        >Register</a>
                         @endif
                         @endauth
                     </div>

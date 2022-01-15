@@ -13,10 +13,66 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-5">
             <div>
-            <a href="/allTank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">See All Task</a>
-            <a href="/task" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add New Task</a>
-            <a href="/editTank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit Task</a>
-            <a href="/dashboard" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Dashboard</a>
+            <a href="/allTank" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onMouseOver="this.style.background='#3054A5' ,this.style.color='#fff'"
+            onMouseOut="this.style.background='#F4C400',this.style.color='#000'"
+            style="background:#F4C400; 
+                        border-radius: 8px;
+                        border: 2px solid #2A2F3C;
+                        padding: 5px;
+                        margin: 10px;
+                        color: #000;
+                        font-weight: 1000;
+                        font-size: 18px;
+                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+                        "
+            >See All Task</a>
+
+            <a href="/task" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onMouseOver="this.style.background='#3054A5' ,this.style.color='#fff'"
+            onMouseOut="this.style.background='#F4C400',this.style.color='#000'"
+            style="background:#F4C400; 
+                        border-radius: 8px;
+                        border: 2px solid #2A2F3C;
+                        padding: 5px;
+                        margin: 10px;
+                        color: #000;
+                        font-weight: 1000;
+                        font-size: 18px;
+                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+                        "
+            >Add New Task</a>
+
+            <a href="/editTank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onMouseOver="this.style.background='#3054A5' ,this.style.color='#fff'"
+            onMouseOut="this.style.background='#F4C400',this.style.color='#000'"
+            style="background:#F4C400; 
+                        border-radius: 8px;
+                        border: 2px solid #2A2F3C;
+                        padding: 5px;
+                        margin: 10px;
+                        color: #000;
+                        font-weight: 1000;
+                        font-size: 18px;
+                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+                        "
+            >Edit Task</a>
+
+            <a href="/dashboard" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onMouseOver="this.style.background='#3054A5' ,this.style.color='#fff'"
+            onMouseOut="this.style.background='#F4C400',this.style.color='#000'"
+            style="background:#F4C400; 
+                        border-radius: 8px;
+                        border: 2px solid #2A2F3C;
+                        padding: 5px;
+                        margin: 10px;
+                        color: #000;
+                        font-weight: 1000;
+                        font-size: 18px;
+                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+                        "
+            >Dashboard</a>
+            
             </div>
             <br>
             <div class="flex">

@@ -1,17 +1,20 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100"
+    style="background:#FDDC54">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <img src="https://ds.lnwfile.com/qtxs2k.jpg" alt="W3Schools.com" width="50" height="25">
+                <img src="https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/welcome.png?alt=media&token=07845931-4213-457c-97c0-1c1eed4ff35c" 
+                    alt="W3Schools.com" width="80" height="50">
 
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')"
+                    style="color:#000">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
