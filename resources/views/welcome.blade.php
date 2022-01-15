@@ -24,7 +24,8 @@
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:green sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div >
-                    <img src="https://ds.lnwfile.com/qtxs2k.jpg" alt="W3Schools.com" width="400" height="200">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/wellcome.png?alt=media&token=16ebc02c-20db-41a0-9cc7-44c53546d8f6" 
+                    alt="W3Schools.com" width="600" height="400">
                     <br><br>
                     <div class="relative flex  justify-center  bg-gray-100 dark:green sm:items-center py-4 sm:pt-0">
                         @auth
