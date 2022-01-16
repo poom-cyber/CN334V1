@@ -90,7 +90,7 @@
                             <th class="text-left p-3 px-5">Update date</th>
 
                         </tr>
-                    </thead>
+                    </thead> 
                     <tbody>
                         @foreach(auth()->user()->tasks as $task)
                         <tr class="border-b hover:bg-orange-100">

@@ -8,7 +8,7 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap">
 
     <!-- Styles -->
     <style>
@@ -437,7 +437,7 @@
     <div style="background:#FDDC54;" class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:green sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
         <div>
-            <img src="https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/welcome.png?alt=media&token=07845931-4213-457c-97c0-1c1eed4ff35c" alt="W3Schools.com" width="800" height="500">
+            <img src="https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/bg3.gif?alt=media&token=9cf346d9-13fc-4daa-95ce-6f996eb63e2b" alt="W3Schools.com" width="800" height="500">
             <br><br>
             <div class="relative flex  justify-center sm:items-center py-4 sm:pt-0">
                 @auth

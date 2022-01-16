@@ -3,7 +3,7 @@
 <style>
     #title {
         font-size: 18px;
-        font-weight: 1000;
+        font-weight: 700;
     }
     #enter {
         color: #fff;

@@ -7,8 +7,8 @@
         border-bottom: 10px solid #F4C400;
     }
 
-    .title {
-        font-weight: 1000;
+    #title {
+        font-weight: 700;
         font-size: 18px;
     }
 
@@ -95,7 +95,7 @@
 
 
                     <div class="form-group">
-                        <a class="title">Create by </a>
+                        <a class="text-left p-3 px-5" id="title" >Create by </a>
                         <textarea name="description" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" placeholder='Enter your name'></textarea>
                         @if ($errors->has('description'))
                         <span class="text-danger" style="color: red">The name field is required.</span>
@@ -103,7 +103,7 @@
                     </div>
                     <br>
                     <div class="form-group">
-                        <a class="title">Content</a>
+                        <a class="text-left p-3 px-5" id="title" >Content</a>
                         <textarea name="model" class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" placeholder='Enter your content'></textarea>
                         @if ($errors->has('model'))
                         <span class="text-danger" style="color: red">The content field is required.</span>
@@ -122,7 +122,7 @@
                         </button>
                     </div>
                     {{ csrf_field() }}
-                </form>
+                </form> 
 
             </div>
         </div>

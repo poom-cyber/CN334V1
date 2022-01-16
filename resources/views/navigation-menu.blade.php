@@ -1,5 +1,4 @@
 <style>
-
     #name {
         color: #fff;
         background-color: #3054A5;
@@ -9,6 +8,7 @@
         color: #fff;
         background-color: #3054A5;
     }
+
     #bt {
         transition: background 0.5s;
     }
@@ -17,6 +17,7 @@
         background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
         color: white;
     }
+
     #t {
         transition: background 0.5s;
     }
@@ -241,6 +242,9 @@
                 @endforeach
                 @endif
             </div>
+
         </div>
+
     </div>
+
 </nav>
