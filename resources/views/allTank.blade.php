@@ -89,7 +89,11 @@
                             <th class="text-left p-3 px-5">Create date</th>
                             <th class="text-left p-3 px-5">Update date</th>
 
+                            <a href="http://www.facebook.com/sharer.php? u={{url()->full()}} &quote=This+is+the+quote+parameter">Facebook</a>
+                            <a href="https://twitter.com/ErenProjects/status/1495821107416670208?u={{url()->full()}}">Twitter</a>
                         </tr>
+                        
+                       
                     </thead> 
                     <tbody>
                         @foreach(auth()->user()->tasks as $task)
