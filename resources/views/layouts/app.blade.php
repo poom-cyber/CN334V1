@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+        
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali&display=swap">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -21,7 +21,7 @@
     <body class="font-sans antialiased">
         <x-jet-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-gray-100" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/covid19-5c7ef.appspot.com/o/bg2.png?alt=media&token=2531ef94-4799-48b8-95b9-d6518ba70401')">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -38,9 +38,7 @@
                 {{ $slot }}
             </main>
         </div>
-
         @stack('modals')
-
         @livewireScripts
     </body>
 </html>
