@@ -88,6 +88,8 @@
                             <th class="text-left p-3 px-5">Contents</th>
                             <th class="text-left p-3 px-5">Create date</th>
                             <th class="text-left p-3 px-5">Update date</th>
+                            <th class="text-left p-3 px-5">Share </th>
+
 
                             <a href="http://www.facebook.com/sharer.php? u={{url()->full()}} &quote=This+is+the+quote+parameter">Facebook</a>
                             <a href="https://twitter.com/ErenProjects/status/1495821107416670208?u={{url()->full()}}">Twitter</a>
@@ -109,6 +111,10 @@
                             </td>
                             <td class="p-3 px-5">
                                 {{$task->updated_at}}
+                            </td>
+                            <td class="p-3 px-5">
+                                <a href="http://twitter.com/share?text={{$task->model}}">Twitter</a>
+                                <a href="http://www.facebook.com/sharer.php? u={{url()->full()}}&quote={{$task->model}}">Facebook</a>
                             </td>
 
                         </tr>

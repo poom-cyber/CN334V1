@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\TasksController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +30,7 @@ Route::middleware(['auth:sanctum', 'verified',])-> group(function(){
 
     Route::get('/task/{task}', [TasksController::class, 'edits']);
     Route::post('/task/{task}', [TasksController::class, 'update']);
-
+    Route::get('/posts', [PostController::class, 'index']);
+    
 });
+
