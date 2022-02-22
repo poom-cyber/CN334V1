@@ -111,9 +111,9 @@
                             </td>
                             <td class="p-3 px-5">
                                 <a href="http://twitter.com/share?text={{$task->model}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded" onMouseOver="this.style.background='#11468F' ,this.style.color='#000'" onMouseOut="this.style.background='#1DA1F2',this.style.color='#fff' "
-                                >Twitter</a>
+                                style="background:'#1DA1F2';">Twitter</a>
                                 <a href="http://www.facebook.com/sharer.php? u={{url()->full()}}&quote={{$task->model}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded" onMouseOver="this.style.background='#11468F' ,this.style.color='#000'" onMouseOut="this.style.background='#4267B2',this.style.color='#fff'"
-                                style="margin-Left:10px;" >Facebook</a>
+                                style="margin-Left:10px background:'#4267B2';" >Facebook</a>
 
                         </tr>
                         @endforeach
