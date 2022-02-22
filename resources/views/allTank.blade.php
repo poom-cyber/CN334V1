@@ -83,23 +83,20 @@
 
                 <table class="w-full text-md rounded mb-4">
                     <thead>
-                        <tr class="border-b">
+                        <tr class="border-b" >
                             <th class="text-left p-3 px-5">Create by</th>
                             <th class="text-left p-3 px-5">Contents</th>
                             <th class="text-left p-3 px-5">Create date</th>
                             <th class="text-left p-3 px-5">Update date</th>
-                            <th class="text-left p-3 px-5">Share </th>
+                            <th class="text-left p-3 px-5"  style="padding:5px; padding-Left: 60px;" >Share </th>
 
-
-                            <a href="http://www.facebook.com/sharer.php? u={{url()->full()}} &quote=This+is+the+quote+parameter">Facebook</a>
-                            <a href="https://twitter.com/ErenProjects/status/1495821107416670208?u={{url()->full()}}">Twitter</a>
                         </tr>
                         
                        
                     </thead> 
-                    <tbody>
+                    <tbody >
                         @foreach(auth()->user()->tasks as $task)
-                        <tr class="border-b hover:bg-orange-100">
+                        <tr class="border-b hover:bg-orange-100" >
                             <td class="p-3 px-5">
                                 {{$task->description}}
                             </td>
@@ -113,9 +110,10 @@
                                 {{$task->updated_at}}
                             </td>
                             <td class="p-3 px-5">
-                                <a href="http://twitter.com/share?text={{$task->model}}">Twitter</a>
-                                <a href="http://www.facebook.com/sharer.php? u={{url()->full()}}&quote={{$task->model}}">Facebook</a>
-                            </td>
+                                <a href="http://twitter.com/share?text={{$task->model}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded" onMouseOver="this.style.background='#11468F' ,this.style.color='#000'" onMouseOut="this.style.background='#1DA1F2',this.style.color='#fff' "
+                                >Twitter</a>
+                                <a href="http://www.facebook.com/sharer.php? u={{url()->full()}}&quote={{$task->model}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded" onMouseOver="this.style.background='#11468F' ,this.style.color='#000'" onMouseOut="this.style.background='#4267B2',this.style.color='#fff'"
+                                style="margin-Left:10px;" >Facebook</a>
 
                         </tr>
                         @endforeach
