@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # Specify the version you desire here
-      - image: circleci/php:7.4-node-browsers
+      - image: circleci/php:8.0-node-browsers
 
     steps:
       - checkout
@@ -17,12 +17,10 @@ jobs:
           command: |
             sudo apt update
             sudo docker-php-ext-install zip
-
       - run:
           name: "Create Environment file"
           command: |
             mv .env.testing .env
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -48,4 +46,3 @@ jobs:
       - run:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
-
