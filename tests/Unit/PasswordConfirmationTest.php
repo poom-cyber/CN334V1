@@ -22,6 +22,7 @@ class PasswordConfirmationTest extends TestCase
         $response->assertStatus(200);
     }
 
+
     public function test_password_can_be_confirmed()
     {
         $user = User::factory()->create();
