@@ -23,7 +23,7 @@ jobs:
           command: |
             mv .env.testing .env
 
-      # Download and cache dependencies
+      # Download and cache dependenciess
       - restore_cache:
           keys:
             # "composer.lock" can be used if it is committed to the repo
