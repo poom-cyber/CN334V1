@@ -1,25 +1,24 @@
 <?php
 
 namespace Tests\Unit;
-
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Facades\Schema;
 
 class TaskUnitTest extends TestCase
 {
-    // test shema test description pass
-    public function test_schema_description()
-    {
+    // // test shema test description pass
+    // public function test_schema_description()
+    // {
 
-    }
+    // }
 
-    // test shema test user_id pass
-    public function test_schema_user_id()
-    {
+    // // test shema test user_id pass
+    // public function test_schema_user_id()
+    // {
 
-    }
+    // }
 
-    public function users_database_has_expected_columns()
+    public function test_users_database_has_expected_columns()
     {
         $this->assertTrue( 
           Schema::hasColumns('users', [
