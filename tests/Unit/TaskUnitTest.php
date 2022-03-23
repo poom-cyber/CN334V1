@@ -3,6 +3,9 @@
 namespace Tests\Unit;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\Task;
 
 class TaskUnitTest extends TestCase
 {
@@ -17,6 +20,8 @@ class TaskUnitTest extends TestCase
     // {
 
     // }
+    use RefreshDatabase, WithFaker;
+
 
     public function test_users_database_has_expected_columns()
     {
@@ -25,6 +30,15 @@ class TaskUnitTest extends TestCase
             'id','name', 'email', 'email_verified_at', 'password'
         ]), 1);
     }
+
+    public function test_userid_description()
+    {
+        $task = new Task([
+            'id' =>  1,
+            'description' => 'test'
+        ]);
+    }
+
 
     // description
     // test shema ทดสอบ รองรับภาษาไทย
