@@ -23,7 +23,7 @@ jobs:
           command: |
             mv .env.testing .env
 
-      # Download and cache dependenciess
+      # Download and cache dependencies
       - restore_cache:
           keys:
             # "composer.lock" can be used if it is committed to the repo
@@ -51,9 +51,7 @@ jobs:
             touch database/database.sqlite
             php artisan migrate --env=testing
 
-
+      # run tests with phpunit
       - run:
-          name: "Create database and run migration"
-          command: |
-            touch database/database.sqlite
-            php artisan migrate --env=testing
+          name: "Run Unit Tests"
+          command: ./vendor/bin/phpunit tests/Unit
