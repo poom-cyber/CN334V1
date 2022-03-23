@@ -56,7 +56,6 @@ jobs:
           name: "Run Unit Tests"
           command: ./vendor/bin/phpunit tests/Unit
 
-<<<<<<< HEAD
       - run:
           name: "Create database and run migration"
           command: |
@@ -66,5 +65,3 @@ jobs:
       - run:
           name: "Run Http Tests"
           command: ./vendor/bin/phpunit tests/Feature
-=======
->>>>>>> abfbfedf1f980c0435bffc817c845d28f0f33fe7
