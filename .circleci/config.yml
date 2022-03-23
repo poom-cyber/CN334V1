@@ -53,7 +53,7 @@ jobs:
       
       - run:
           name: "Create Seeder file"
-          command: php artisan db:seed --class=UserSeeder
+          command: php artisan db:seed
 
 
       # run tests with phpunit
