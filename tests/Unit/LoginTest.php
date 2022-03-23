@@ -13,7 +13,7 @@ class LoginTest extends TestCase
 
     public function test_login_screen_can_be_rendered()
     {
-        $response = $this->get('/login');
+        $response = $this->get('/logins');
 
         $response->assertStatus(200);
     }
@@ -30,7 +30,7 @@ class LoginTest extends TestCase
         $this->assertAuthenticated();
         $response->assertRedirect(RouteServiceProvider::HOME);
     }
-   
+
 
     public function test_users_can_not_authenticate_with_invalid_password()
     {
