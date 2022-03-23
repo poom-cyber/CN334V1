@@ -52,7 +52,3 @@ jobs:
           command: |
             touch database/database.sqlite
             php artisan migrate --env=testing
-
-	    - run:
-          name: "Run Http Tests"
-          command: ./vendor/bin/phpunit tests/Unit
