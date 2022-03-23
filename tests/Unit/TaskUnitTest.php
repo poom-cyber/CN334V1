@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
+use Illuminate\Support\Facades\Schema;
 
 class TaskUnitTest extends TestCase
 {
@@ -16,6 +17,14 @@ class TaskUnitTest extends TestCase
     public function test_schema_user_id()
     {
 
+    }
+
+    public function users_database_has_expected_columns()
+    {
+        $this->assertTrue( 
+          Schema::hasColumns('users', [
+            'id','name', 'email', 'email_verified_at', 'password'
+        ]), 1);
     }
 
     // description
