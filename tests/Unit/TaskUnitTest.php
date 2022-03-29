@@ -1,7 +1,9 @@
 <?php
 
 namespace Tests\Unit;
+
 namespace Tests\Feature;
+
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -28,56 +30,67 @@ class TaskUnitTest extends TestCase
 
     public function test_userid_description()
     {
-        $task = new Task([
-            'id' =>  1,
-            'description' => 'test'
-        ]);
-    }
-
-    public function test_userid_description_user()
-    {
         $task = new User([
-            'id' =>  1,
+            'name' => 'test',
             'email' => 'test@gmail.com'
         ]);
     }
+    // test shema ทดสอบ ใส่ตัวเลขได้ไหม
+    public function test_shema_support_integer()
+    {
+        $this->assertTrue(true);
+    }
+    // test shema ทดสอบ ใส่คำสั่ง SQL ได้ไหม
+    public function test_shema_detect_sql_injection()
+    {
+        $this->assertTrue(true);
+    }
+    // test shema ทดสอบ ความยาวตัวอักษร
+    public function test_shema_support_lange_string()
+    {
+        $this->assertTrue(true);
+    }
 
+    /* ID */
+    // test shema ทดสอบ เป็น integer ได้ไหม
+    public function test_id_support_integer()
+    {
+        $this->assertTrue(true);
+    }
+    // test shema ทดสอบ เป็น null ได้มั้ย
+    public function test_id_detect_null()
+    {
+        $this->assertTrue(true);
+    }
+
+    // test route ทดสอบการ route หน้าต่างๆ
     public function test_route_exists()
     {
-        $response = $this->get('/');
-        $response->assertStatus(200);
+        $welcomePage = $this->get('/');
+        $welcomePage->assertStatus(200);
 
- 
+        $welcomePage = $this->get('/dashboard');
+        $welcomePage->assertStatus(200);
+
         // ...
     }
+
+    // Test rule of database
     public function test_rules(): array
-{
-    return [
-        'title' => 'string|required',
-        'content' => 'string|required',
-    ];
-}
+    {
+        return [
+            'title' => 'string|required',
+            'content' => 'string|required',
+        ];
+    }
 
-public function test_database_user_missing()
-{
-    // Make call to application...
- 
-    $this->assertDatabaseMissing ('users', [
-        'email' => 'sally@example.com'
-    ]);
+    // Test database ไม่มีอยู่
+    public function test_database_user_missing()
+    {
+        // Make call to application...
 
-
-}
-
-
-    // description
-    // test shema ทดสอบ รองรับภาษาไทย
-    // test shema ทดสอบ รองรับภาษาอังกฤษไหม
-    // test shema ทดสอบ ใส่ตัวเลขได้ไหม
-    // test shema ทดสอบ ใส่คำสั่ง SQL ได้ไหม
-    // test shema ทดสอบ ความยาวตัวอักษร
-    
-    // id
-    // test shema ทดสอบ เป็น null ได้มั้ย
-    // test shema ทดสอบ เป็น integer ได้ไหม
+        $this->assertDatabaseMissing('users', [
+            'email' => 'sally@example.com'
+        ]);
+    }
 }

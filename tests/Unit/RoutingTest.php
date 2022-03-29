@@ -8,12 +8,12 @@ use Laravel\Fortify\Features;
 use Laravel\Jetstream\Jetstream;
 use Tests\TestCase;
 
-class HomePageTest extends TestCase
+class RoutingTest extends TestCase
 {
 
     public function test_homepage_screen_can_be_rendered()
     {
-        if (! Features::enabled(Features::registration())) {
+        if (!Features::enabled(Features::registration())) {
             return $this->markTestSkipped('Registration support is not enabled.');
         }
 
@@ -21,6 +21,4 @@ class HomePageTest extends TestCase
 
         $response->assertStatus(200);
     }
-
-
 }
