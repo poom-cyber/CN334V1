@@ -64,15 +64,20 @@ class TaskUnitTest extends TestCase
     }
 
     // test route ทดสอบการ route หน้าต่างๆ
-    public function test_route_exists()
+    public function test_route_before_login_exists()
     {
+        // Welome page route
         $welcomePage = $this->get('/');
         $welcomePage->assertStatus(200);
+        
 
-        $welcomePage = $this->get('/dashboard');
-        $welcomePage->assertStatus(200);
+        // Login page route
+        $loginPage = $this->get('/login');
+        $loginPage->assertStatus(200);
 
-        // ...
+        // Register page route
+        $registerPage = $this->get('/register');
+        $registerPage->assertStatus(200);
     }
 
     // Test rule of database
