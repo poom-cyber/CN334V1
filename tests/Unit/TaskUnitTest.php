@@ -14,17 +14,6 @@ use Database\Factories\UserFactory;
 
 class TaskUnitTest extends TestCase
 {
-<<<<<<< HEAD
-    use RefreshDatabase;
-    /* Description */
-    // test shema ทดสอบ รองรับภาษาไทย
-    public function test_shema_support_thai()
-    {
-        $this->assertTrue(true);
-    }
-    // test shema ทดสอบ รองรับภาษาอังกฤษไหม
-    public function test_shema_support_english()
-=======
     // // test shema test description pass
     // public function test_schema_description()
     // {
@@ -40,7 +29,6 @@ class TaskUnitTest extends TestCase
 
 
     public function test_userid_description()
->>>>>>> f8b878fa259ab60fa2d89af1895c3f4f96255747
     {
         $task = new User([
             'name' => 'test',
@@ -107,7 +95,7 @@ class TaskUnitTest extends TestCase
         // Make call to application...
 
         $this->assertDatabaseMissing('users', [
-            'email' => 'sally@example.com'
+            'email' => 'user@example.com'
         ]);
     }
 }
