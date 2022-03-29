@@ -10,33 +10,24 @@ use Illuminate\Foundation\Testing\WithFaker;
 use App\Models\Task;
 use App\Models\User;
 use Database\Factories\UserFactory;
+use Database\Factories\TaskFactory;
+use Illuminate\Support\Facades\Schema;
 
 
 
 class TaskUnitTest extends TestCase
 {
-    // // test shema test description pass
-    // public function test_schema_description()
-    // {
 
-    // }
-
-    // // test shema test user_id pass
-    // public function test_schema_user_id()
-    // {
-
-    // }
     use RefreshDatabase, WithFaker;
 
-
-    public function test_userid_description()
+    // Test user model exist
+    public function test_model_user_exists()
     {
-        $task = new User([
-            'name' => 'test',
-            'email' => 'test@gmail.com'
-        ]);
+        $user = User::factory()->create();
+
+        $this->assertModelExists($user);
     }
-    
+
     // test shema ทดสอบ ใส่ตัวเลขได้ไหม
     public function test_shema_support_integer()
     {
@@ -113,5 +104,32 @@ class TaskUnitTest extends TestCase
         $this->assertDatabaseMissing('users', [
             'email' => 'user@example.com'
         ]);
+    }
+
+    public function test_database_task_missing()
+    {
+        // Make call to application...
+
+        $this->assertDatabaseMissing('tasks', [
+            'description' => 'test',
+            'model' => 'test'
+        ]);
+    }
+
+    // Test field ข้อมูลใน Database user
+
+    public function test_user_database_has_expected_columns()
+    {
+        $this->assertTrue( 
+          Schema::hasColumns('users', [
+            'id', 'name', 'password', 'email' ]), 1);
+    }
+
+    // Test field ข้อมูลใน Database task
+    public function test_task_database_has_expected_columns()
+    {
+        $this->assertTrue( 
+          Schema::hasColumns('tasks', [
+            'id', 'description', 'model', 'user_id' ]), 1);
     }
 }
