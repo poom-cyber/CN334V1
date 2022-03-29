@@ -87,15 +87,6 @@ class TaskUnitTest extends TestCase
             ->assertRedirect('/');
     }
 
-    // Test rule of database
-    public function test_rules(): array
-    {
-        return [
-            'title' => 'string|required',
-            'content' => 'string|required',
-        ];
-    }
-
     // Test database ไม่มีอยู่
     public function test_database_user_missing()
     {
@@ -117,19 +108,24 @@ class TaskUnitTest extends TestCase
     }
 
     // Test field ข้อมูลใน Database user
-
     public function test_user_database_has_expected_columns()
     {
-        $this->assertTrue( 
-          Schema::hasColumns('users', [
-            'id', 'name', 'password', 'email' ]), 1);
+        $this->assertTrue(
+            Schema::hasColumns('users', [
+                'id', 'name', 'password', 'email'
+            ]),
+            1
+        );
     }
 
     // Test field ข้อมูลใน Database task
     public function test_task_database_has_expected_columns()
     {
-        $this->assertTrue( 
-          Schema::hasColumns('tasks', [
-            'id', 'description', 'model', 'user_id' ]), 1);
+        $this->assertTrue(
+            Schema::hasColumns('tasks', [
+                'id', 'description', 'model', 'user_id'
+            ]),
+            1
+        );
     }
 }
