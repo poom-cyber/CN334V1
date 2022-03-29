@@ -52,7 +52,7 @@ class TaskUnitTest extends TestCase
         $this->assertTrue($hasUser);
 
         $response = $this->actingAs($user)->get('/allTank');
-
+        
         $response->assertStatus(200);
     }
 
