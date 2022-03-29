@@ -2,12 +2,19 @@
 
 namespace Tests\Unit;
 
-use App\Models\task;
+namespace Tests\Feature;
+
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use App\Models\Task;
+use App\Models\User;
+use Database\Factories\UserFactory;
+
 
 class TaskUnitTest extends TestCase
 {
+<<<<<<< HEAD
     use RefreshDatabase;
     /* Description */
     // test shema ทดสอบ รองรับภาษาไทย
@@ -17,8 +24,28 @@ class TaskUnitTest extends TestCase
     }
     // test shema ทดสอบ รองรับภาษาอังกฤษไหม
     public function test_shema_support_english()
+=======
+    // // test shema test description pass
+    // public function test_schema_description()
+    // {
+
+    // }
+
+    // // test shema test user_id pass
+    // public function test_schema_user_id()
+    // {
+
+    // }
+    use RefreshDatabase, WithFaker;
+
+
+    public function test_userid_description()
+>>>>>>> f8b878fa259ab60fa2d89af1895c3f4f96255747
     {
-        $this->assertTrue(true);
+        $task = new User([
+            'name' => 'test',
+            'email' => 'test@gmail.com'
+        ]);
     }
     // test shema ทดสอบ ใส่ตัวเลขได้ไหม
     public function test_shema_support_integer()
@@ -47,5 +74,40 @@ class TaskUnitTest extends TestCase
     {
         $this->assertTrue(true);
     }
-    
+
+    // test route ทดสอบการ route หน้าต่างๆ
+    public function test_route_before_login_exists()
+    {
+        // Welome page route
+        $welcomePage = $this->get('/');
+        $welcomePage->assertStatus(200);
+        
+
+        // Login page route
+        $loginPage = $this->get('/login');
+        $loginPage->assertStatus(200);
+
+        // Register page route
+        $registerPage = $this->get('/register');
+        $registerPage->assertStatus(200);
+    }
+
+    // Test rule of database
+    public function test_rules(): array
+    {
+        return [
+            'title' => 'string|required',
+            'content' => 'string|required',
+        ];
+    }
+
+    // Test database ไม่มีอยู่
+    public function test_database_user_missing()
+    {
+        // Make call to application...
+
+        $this->assertDatabaseMissing('users', [
+            'email' => 'sally@example.com'
+        ]);
+    }
 }
