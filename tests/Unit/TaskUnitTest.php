@@ -71,19 +71,19 @@ class TaskUnitTest extends TestCase
         $response->assertStatus(200);
     }
 
-        //Test route task
-        public function test_a_visitor_can_able_to_login_get_task()
-        {
-            $user = User::factory()->create();
-    
-            $hasUser = $user ? true : false;
-    
-            $this->assertTrue($hasUser);
-    
-            $response = $this->actingAs($user)->get('/task');
-    
-            $response->assertStatus(200);
-        }
+    //Test route task
+    public function test_a_visitor_can_able_to_login_get_task()
+    {
+        $user = User::factory()->create();
+
+        $hasUser = $user ? true : false;
+
+        $this->assertTrue($hasUser);
+
+        $response = $this->actingAs($user)->get('/task');
+
+        $response->assertStatus(200);
+    }
 
 
 
@@ -128,7 +128,7 @@ class TaskUnitTest extends TestCase
         // Welome page route
         $welcomePage = $this->get('/');
         $welcomePage->assertStatus(200);
-        
+
 
         // Login page route
         $loginPage = $this->get('/login');
@@ -145,8 +145,8 @@ class TaskUnitTest extends TestCase
             'email' => 'test1@gmail.com',
             'password' => '1234567890'
         ];
-         $this->post('login',$credential)
-             ->assertRedirect('/');
+        $this->post('login', $credential)
+            ->assertRedirect('/');
     }
 
     // Test rule of database
