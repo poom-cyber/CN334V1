@@ -52,7 +52,7 @@ class TaskUnitTest extends TestCase
         $this->assertTrue($hasUser);
 
         $response = $this->actingAs($user)->get('/allTank');
-        
+
         $response->assertStatus(200);
     }
 
@@ -119,7 +119,11 @@ class TaskUnitTest extends TestCase
     // test shema ทดสอบ เป็น null ได้มั้ย
     public function test_id_detect_null()
     {
-        $this->assertTrue(true);
+        $task = new Task([
+            'usaer_id' => 1,
+            'description' => null,
+        ]);
+        $this->assertEquals(null, $task->description);
     }
 
     // test route ทดสอบการ route หน้าต่างๆ
@@ -142,7 +146,7 @@ class TaskUnitTest extends TestCase
     public function test_route_after_login_exists()
     {
         $credential = [
-            'email' => 'test1@gmail.com',
+            'email' => 'user@gmail.com',
             'password' => '1234567890'
         ];
          $this->post('login',$credential)
