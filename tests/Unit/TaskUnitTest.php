@@ -1,11 +1,14 @@
 <?php
 
 namespace Tests\Unit;
-use PHPUnit\Framework\TestCase;
-use Illuminate\Support\Facades\Schema;
+namespace Tests\Feature;
+use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use App\Models\Task;
+use App\Models\User;
+use Database\Factories\UserFactory;
+
 
 class TaskUnitTest extends TestCase
 {
@@ -23,14 +26,6 @@ class TaskUnitTest extends TestCase
     use RefreshDatabase, WithFaker;
 
 
-    public function test_users_database_has_expected_columns()
-    {
-        $this->assertTrue( 
-          Schema::hasColumns('users', [
-            'id','name', 'email', 'email_verified_at', 'password'
-        ]), 1);
-    }
-
     public function test_userid_description()
     {
         $task = new Task([
@@ -38,6 +33,41 @@ class TaskUnitTest extends TestCase
             'description' => 'test'
         ]);
     }
+
+    public function test_userid_description_user()
+    {
+        $task = new User([
+            'id' =>  1,
+            'email' => 'test@gmail.com'
+        ]);
+    }
+
+    public function test_route_exists()
+    {
+        $response = $this->get('/');
+        $response->assertStatus(200);
+
+ 
+        // ...
+    }
+    public function test_rules(): array
+{
+    return [
+        'title' => 'string|required',
+        'content' => 'string|required',
+    ];
+}
+
+public function test_database_user_missing()
+{
+    // Make call to application...
+ 
+    $this->assertDatabaseMissing ('users', [
+        'email' => 'sally@example.com'
+    ]);
+
+
+}
 
 
     // description
