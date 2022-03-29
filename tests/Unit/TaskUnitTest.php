@@ -8,6 +8,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class TaskUnitTest extends TestCase
 {
+    use RefreshDatabase;
     /* Description */
     // test shema ทดสอบ รองรับภาษาไทย
     public function test_shema_support_thai()
